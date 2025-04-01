@@ -1,0 +1,1 @@
+add_executable(RunningSumOf1DArray RunningSumOf1DArray.cpp)
