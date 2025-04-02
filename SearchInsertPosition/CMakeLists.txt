@@ -1,0 +1,1 @@
+add_executable(SearchInsertPosition main.cpp)
