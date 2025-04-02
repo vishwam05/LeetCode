@@ -13,27 +13,14 @@ public:
     int removeElement(vector<int>& nums, int val) {
         int numVal = 0;
         for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] == val) {
-                numVal++; //Gets the number of int Values
+            if (nums[i] != val) {
+                nums[nums[i]] = nums[i];
+                numVal++;
             }
         }
-
-        for (int i = 0; i < nums.size() - 1; i++) {// Pushses all the target values to the back
-            for (int j = i; j < nums.size()-i-1; j++) {
-                if (nums[j] == val) {
-                    nums[j] = nums[j+1];
-                    nums[j+1] = val;
-                }
-            }
-        }
-
-        for (int i = 0; i < numVal; i++) { //Deletes the same number at the back
-            nums.pop_back();
-        }
-
-        return nums.size();
-
+        return numVal;
     }
+
 
 };
 
